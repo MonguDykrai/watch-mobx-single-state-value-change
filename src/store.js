@@ -7,11 +7,13 @@ class Store {
   };
   price = Date.now();
   dest = '';
+  bgColor = 'transparent';
   constructor() {
     makeAutoObservable(this, {
       geo: observable,
       price: observable,
       dest: observable,
+      bgColor: observable,
       fetchRealtimeTicketPrice: action,
       setGeo: action,
       setDest: action,
@@ -27,6 +29,9 @@ class Store {
   }
   setDest(dest) {
     this.dest = dest;
+  }
+  setBgColor(color) {
+    this.bgColor = color;
   }
 }
 

@@ -40,13 +40,14 @@ const App = () => {
   //   });
   // }, []);
   return (
-    <div>
+    <div style={{ backgroundColor: Store.bgColor }}>
       <button onClick={() => Store.setDest('hongqiao')}>
         目的地：虹桥机场
       </button>
       <div>{JSON.stringify(Store.geo)}</div>
       <div>price: {Store.price}</div>
       <div>dest: {Store.dest}</div>
+      <button onClick={() => Store.setBgColor('green')}>设置背景色</button>
     </div>
   );
 };
