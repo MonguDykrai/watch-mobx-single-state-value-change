@@ -1,4 +1,4 @@
-import { makeAutoObservable, action } from 'mobx';
+import { makeAutoObservable, action, observable } from 'mobx';
 
 class Store {
   geo = {
@@ -9,6 +9,9 @@ class Store {
   dest = '';
   constructor() {
     makeAutoObservable(this, {
+      geo: observable,
+      price: observable,
+      dest: observable,
       fetchRealtimeTicketPrice: action,
       setGeo: action,
       setDest: action,
